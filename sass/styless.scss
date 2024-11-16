@@ -1,0 +1,566 @@
+/* Global Styles */
+$primary-color: #00945f; // Green - Primary brand color for consistency across elements
+$accent-color: #e97300; // Orange - Accent color for highlights like buttons and calls to action
+$text-light: #7b7b7b; // Light Gray - For secondary text to distinguish it from the main text
+$text-dark: #555555; // Dark Gray - Main text color for better readability
+$background-light: #ebf7f5; // Light Background - Soft background color for sections
+$font-primary: Arial, sans-serif; // Base font - A simple and legible font for general text
+$default-line-length: 35%;
+$medium-line-length: 50%;
+$small-line-length: 30%;
+
+/* Breakpoints */
+$breakpoint-sm: 600px; // Small devices (mobile phones) - For responsiveness
+$breakpoint-md: 900px; // Medium devices (tablets) - For medium screen sizes
+$breakpoint-lg: 1250px; // Large devices (desktops) - For larger screens like desktops
+
+/* Media Query Mixins */
+@mixin media-sm {
+
+    // Mixin for small devices
+    @media (max-width: $breakpoint-sm) {
+        @content; // Allows inserting custom styles for small screens
+    }
+}
+
+@mixin media-md {
+
+    // Mixin for medium devices
+    @media (max-width: $breakpoint-md) {
+        @content; // Allows inserting custom styles for medium screens
+    }
+}
+
+@mixin media-lg {
+
+    // Mixin for large devices
+    @media (max-width: $breakpoint-lg) {
+        @content; // Allows inserting custom styles for large screens
+    }
+}
+
+/* Universal Box-Sizing and Font Settings */
+* {
+    box-sizing: border-box; // Ensures padding and borders are included in element's total width and height
+    margin: 0; // Resets default margin to avoid inconsistencies
+    padding: 0; // Resets default padding to avoid inconsistencies
+    font-family: $font-primary; // Applies the primary font to all elements
+}
+
+/* -------------- Body ---------------- */
+body {
+    font-size: 1rem; // Default font size for body text
+    line-height: 1.6; // Improves readability by adding spacing between lines
+    color: $text-dark; // Applies the primary text color for consistency
+}
+
+/* -------------- h3 and hr common styles for hero section and Get the Citizens Advantage Section ---------------- */
+h3 {
+    text-align: center; // Centers the heading for emphasis
+    font-size: 2.5rem; // Larger font size for prominence
+    color: $primary-color; // Applies primary color for brand consistency
+    font-weight: 400; // Regular weight to keep the heading bold but not overpowering
+    margin: 20px 0; // Adds space around the heading for better layout
+}
+
+hr {
+    width: 5%; // Slim horizontal rule for aesthetic separation
+    margin: auto; // Centers the rule horizontally
+    border: 1px solid $primary-color; // Primary color for visual consistency
+}
+
+/* ----------- Hero Section ----------- */
+#herosection {
+    text-align: left; // Aligns the text to the left for the main section
+    padding: 0px 0px 40px 0px; // Padding to create space inside the section
+    background-color: #fff; // White background for a clean and simple look
+
+    #logo {
+        width: 325px; // Sets a fixed width for the logo
+        height: auto; // Maintains aspect ratio for the logo
+        margin: 15px 30px; // Adds space around the logo
+    }
+
+    #main-img {
+        width: 100%; // Ensures the image takes full width of the section
+        height: auto; // Maintains aspect ratio
+        margin-bottom: 20px; // Adds space below the image
+        object-fit: cover; // Ensures the image covers the entire area without distortion
+        object-position: left; // Aligns the image to the left
+    }
+
+    p {
+        font-size: 1rem; // Default font size for paragraph text
+        color: $text-light; // Lighter text for secondary information
+        line-height: 1.5; // Improves readability by adding space between lines
+        word-spacing: 0.2rem; // Adds some space between words for better clarity
+        margin: 30px; // Adds margin around the paragraph for spacing
+        padding: 0px 20px;
+    }
+
+    .carrersbutton {
+        text-align: center; // Centers the button horizontally
+
+        button {
+            background-color: $accent-color; // Sets the background color of the button
+            padding: 10px 20px; // Adds padding for better button size
+            font-size: 1.6rem; // Larger font for the button text
+            color: white; // White text for contrast
+            border: none; // Removes the default border from the button
+            cursor: pointer; // Changes cursor to pointer to indicate it's clickable
+            transition: background-color 0.3s ease; // Smooth transition for background color on hover
+
+            &:hover {
+                background-color: darkorange; // Darkens the button on hover for interactivity
+            }
+        }
+    }
+}
+
+/* ----------- Get the Citizens Advantage Section ----------- */
+.card-container {
+    display: flex; // Flexbox for flexible layouts
+    flex-wrap: wrap; // Allows the items to wrap to the next line if needed
+    gap: 70px; // Adds space between the cards
+    justify-content: center; // Centers the cards horizontally
+    margin: 80px 40px ;// Adds space above and below the container
+    position: relative;
+
+    svg {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+      }
+      .bottom-svg{
+        top: 65%;
+      }
+      
+}
+    
+.cards {
+    background: #fff; // White background for the cards
+    padding: 0px 30px; // Adds padding inside the cards for spacing
+    width: 47%; // Sets the card width to nearly half of the container width
+    text-align: left; // Left-aligns the text within the card
+
+
+    h4 {
+        font-size: 1.35rem; // Sets the font size for the card title
+        color: $primary-color; // Primary color for the heading
+        font-weight: 400; // Regular weight for the heading
+        padding-bottom: 15px; // Adds space below the heading
+    }
+
+    p {
+        color: $text-light; // Lighter color for secondary text
+        line-height: 1.5; // Adds space between lines for readability
+        word-spacing: 0.2rem; // Adds space between words
+        text-align: justify; // Justifies the text for a clean look
+
+        a {
+            color: #91c12c; // Green color for links to stand out
+            text-decoration: none; // Removes the default underline from links
+            cursor: pointer; // Changes cursor to pointer to indicate interactivity
+        }
+    }
+}
+
+.card-space {
+    margin-bottom: 50px; // Adds margin below each card to separate them
+}
+
+/* ----------- Loans Section ----------- */
+#loans-section {
+    margin: 100px 40px; // Adds margin around the section to give it space
+
+    h4 {
+        font-size: 1.75rem; // Larger font size for the subheading
+        font-weight: 300; // Lighter font weight for subheading
+        background-color: $primary-color; // Primary color background for the heading
+        color: white; // White text for contrast
+        text-align: center; // Centers the heading
+        padding-block: 10px; // Adds padding above and below the heading
+    }
+
+    p {
+        background-color: $background-light; // Light background for the paragraph
+        color: #8f8f8f; // Light gray text for readability
+        line-height: 1.5; // Line height for readability
+        word-spacing: 0.5rem; // Adds space between words for better readability
+        padding: 20px 100px; // Adds padding around the paragraph
+        text-align: justify; // Justifies the text for a clean look
+    }
+}
+
+/* ----------- Officers Section ----------- */
+#officers {
+    display: flex; // Flexbox for flexible layout
+    justify-content: space-between; // Adds space between officer cards
+    margin-bottom: 6rem; // Adds space below the officers section
+    padding: 0rem 6rem; // Padding around the section
+    gap: 6rem; // Adds space between the officers cards
+}
+
+.bank-officers {
+    display: flex; // Flexbox for flexible layout
+    flex-direction: column; // Arranges the elements vertically
+    text-align: center; // Centers the text inside the cards
+    justify-content: space-between; // Distributes space evenly between the elements
+
+    >div>img {
+        width: 12rem; // Fixed width for the officer images
+        height: auto; // Maintains aspect ratio
+        align-self: center; // Centers the image horizontally
+    }
+
+    >div>p {
+        position: relative; // Makes the quote position relative for absolute positioning inside it
+        z-index: 2; // Brings the text in front of the pseudo-elements
+        margin-top: 1.125rem; // Adds space above the quote text
+        color: #8f8f8f; // Light gray color for the quote text
+        line-height: 1.5; // Line height for readability
+        font-size: 0.95rem; // Smaller font size for the quote text
+        word-spacing: 0.11rem; // Adds slight space between words
+        font-weight: 400; // Regular font weight
+        font-style: italic; // Italics for the quote text
+        
+
+        &::before {
+            font-family: "Lora", serif; // Uses a serif font for the quote mark
+            position: absolute; // Positions the quote mark absolutely
+            font-size: 11rem; // Large font size for the quote mark
+            z-index: 1; // Places the quote mark behind the text
+            opacity: 0.2; // Slightly transparent quote mark
+            content: "‘‘"; // Adds the quote marks as content
+            left: -32px; // Positions it slightly off to the left
+            bottom: -125px; // Positions it lower
+        }
+    }
+
+    .officer-name {
+        margin-top: 20px; // Adds space between the quote and officer's name
+        font-style: normal; // Regular style for the officer's name
+        color: $primary-color; // Primary color for the officer's name
+    }
+}
+
+/* ----------- Footer Section ----------- */
+footer {
+    border-top: 1px solid $primary-color; // Adds a border on top of the footer for separation
+    padding: 50px 20px; // Adds padding inside the footer to give space
+
+    p {
+        color: #8f8f8f; // Light gray color for footer text
+        font-size: 0.75rem; // Smaller font size for footer text
+        font-weight: 400; // Regular weight for footer text
+
+        a {
+            text-decoration: underline; // Underlines the links for emphasis
+            color: #8f8f8f; // Light gray color for links
+        }
+    }
+
+    .Statements {
+        margin-top: 30px; // Adds space above the statements
+        color: #5a5a5a; // Darker gray color for the statements text
+    }
+
+    div {
+        img {
+            width: 30px; // Smaller logo size in footer
+            height: 30px; // Equal height to maintain aspect ratio
+        }
+    }
+
+    .social-media-logos {
+        margin-bottom: 25px; // Adds space below the social media logos
+    }
+}
+
+/*for desktops*/
+@include media-lg {
+    /* -------------- h3 and hr common styles for hero section and Get the Citizens Advantage Section ---------------- */
+    h3 {
+        text-align: center; // Centers heading text
+        font-size: 2.5rem; // Larger font size for emphasis
+        color: $primary-color; // Primary color for the heading
+        font-weight: 400; // Regular weight for consistency
+        margin: 20px 0; // Adds margin around the heading
+    }
+
+    hr {
+        width: 15%; // Increases the width of the horizontal line for larger screens
+    }
+
+    /* ----------- Hero Section ----------- */
+    #herosection {
+        #logo {
+            width: 300px; // Sets a smaller logo size for larger screens
+            height: auto; // Keeps the aspect ratio intact
+            margin: 10px; // Adds a smaller margin around the logo
+        }
+
+        p {
+            margin: 20px 30px 50px; // Adds padding around the text for better spacing
+        }
+    }
+
+    /* ----------- Get the Citizens Advantage Section ----------- */
+    .card-container {
+        gap: 0px; // No gap between the cards on larger screens
+        margin: 10px 0px 20px; // Small margin for spacing between cards
+         
+    }
+
+    .cards {
+        padding: 0px 30px; // Padding inside the cards
+        width: 50%; // Sets the width of the cards to 50%
+        margin-block: 50px; // Adds vertical margin for spacing
+    }
+
+    /* ----------- Loans Section ----------- */
+    #loans-section {
+        margin-bottom: 50px; // Reduces the margin below the section
+
+        p {
+            word-spacing: 0.2rem; // Reduces the word spacing for better readability
+            padding: 20px; // Padding around the paragraph
+        }
+    }
+}
+
+/*for tables and ipads*/
+@include media-md {
+    hr {
+        width: 15%; // Sets the width of the horizontal line for medium-sized screens
+    }
+
+    /* ----------- Hero Section ----------- */
+    #herosection {
+        #logo {
+            width: 220px; // Smaller logo for tablets
+            height: auto; // Maintains aspect ratio
+            margin: 10px; // Adds space around the logo
+        }
+
+        #main-img {
+            object-position: top-left; // Aligns the image to the top-left
+            object-position: -2%; // Fine-tunes the image position
+            height: 35vh; // Sets the height of the image to 35% of the viewport height
+            width: 100%; // Makes the image take full width of the section
+        }
+
+        p {
+            margin: 20px 50px 50px; // Adds margin to the paragraph for spacing
+            font-size: 1rem; // Sets the font size for medium devices
+            line-height: 1.7; // Adjusts line height for better readability
+            text-align: justify; // Justifies text for clean layout
+            word-spacing: 0; // No word-spacing for cleaner text
+        }
+    }
+
+    /* ----------- Get the Citizens Advantage Section ----------- */
+    .card-container {
+        gap: 0px; // No gap between cards
+        margin: 10px 0px 20px; // Adjusted margin for spacing
+
+        svg {
+            display: none;
+         }
+
+        .cards {
+            padding: 0px 50px; // Adds padding inside the cards
+            width: 100%; // Cards take full width on medium screens
+            margin-block: 20px; // Adds vertical margin for spacing
+
+            p {
+                padding-bottom: 20px; // Adds space below the text
+                border-bottom: 1px solid $text-light; // Adds border below text
+            }
+        }
+
+        :last-child p {
+            border-bottom: none; // Removes bottom border on the last card
+        }
+    }
+
+    /* ----------- Loans Section ----------- */
+    #loans-section {
+        p {
+            word-spacing: 0.2rem; // Slight spacing between words
+            padding: 20px; // Padding for spacing
+        }
+    }
+
+    /* ----------- Officers Section ----------- */
+    #officers {
+        flex-wrap: wrap; // Allows wrapping for smaller screens
+
+        .bank-officers {
+            div>p {
+                &::before {
+                    left: -15px; // Adjusts the position of the quote mark
+                    bottom: -107px; // Fine-tunes the position
+                }
+            }
+
+            div>.adjustqoutes::before {
+                left: -6px; // Adjusts quote mark position for adjusted cards
+                bottom: -152px; // Fine-tunes position
+            }
+        }
+    }
+}
+
+/* ----------- Media Queries for Responsiveness ----------- */
+
+/* Small devices (mobile phones) */
+@include media-sm {
+
+    /* -------------- h3 and hr common styles for hero section and Get the Citizens Advantage Section ---------------- */
+    h3 {
+        font-size: 1.6rem; // Reduces font size for smaller screens
+        font-weight: 200; // Lighter font weight for better readability
+        margin-block: 15px; // Smaller margin around the heading
+        line-height: 1; // Adjusts line-height for tighter text
+    }
+
+    hr {
+        width: 25%; // Increases the width of the horizontal line
+    }
+
+    /* ----------- Hero Section ----------- */
+    header {
+        text-align: center; // Centers the header text on small screens
+    }
+
+    #herosection {
+        #logo {
+            width: 180px; // Smaller logo for mobile
+            height: auto; // Maintains aspect ratio
+            margin: 10px; // Adds margin for spacing
+        }
+
+        #main-img {
+            object-position: top-left; // Aligns the image to the top-left
+            object-position: -2%; // Fine-tunes the image position
+            height: 35vh; // Sets the image height for small screens
+            width: 100%; // Ensures the image covers full width
+        }
+
+        p {
+            margin: 20px; // Margin for spacing
+            font-size: 0.95rem; // Slightly smaller font for mobile screens
+            line-height: 1.7; // Adjusts line height for better readability
+            text-align: left; // Justifies text for a cleaner look
+            word-spacing: 2px; // No word-spacing for better text alignment
+        }
+        .carrersbutton button {
+            font-size: 1.25rem; // Increases font size of button text
+            margin-top: 2rem; // Adds space above the button
+    
+        }
+    }
+
+
+    /* ----------- Get the Citizens Advantage Section ----------- */
+    #articles h3 {
+        padding: 0px 50px; // Adds padding to the section heading
+    }
+
+    .card-container {
+        gap: 0rem; // No gap between the cards on small screens
+        margin-block: 30px; // Adds vertical margin for spacing
+        justify-content: space-evenly;
+
+        svg {
+            display: none;
+         }
+
+        .cards {
+            padding: 0px 20px; // Padding inside the cards
+            width: 100%; // Cards take full width of the container
+            margin-top: -11px;
+
+            h4 {
+                font-size: 1.25rem; // Adjusts font size for headings inside cards
+                padding-bottom: 8px; // Adds space below heading
+            }
+
+            p {
+                font-size: 0.9rem; // Smaller font for text inside cards
+                line-height: 1.6; // Increases line height for readability
+                text-align: left; // Aligns text to the left
+                border-bottom: 1px solid $text-light; // Adds border below text
+            }
+        }
+
+        :last-child p {
+            border-bottom: none; // Removes bottom border from last card
+        }
+    }
+
+    /* ----------- Loans Section ----------- */
+    #loans-section {
+        margin: 20px; // Margin around the section
+
+        h4 {
+            font-size: 1.25rem; // Adjusts font size for headings in the section
+            padding: 10px 20px; // Padding around heading
+        }
+
+        p {
+            padding: 20px 10px; // Padding around text
+            font-size: 0.95rem; // Smaller font for paragraph text
+            word-spacing: 0; // No word-spacing for cleaner look
+            text-align: left; // Left-aligns the text
+        }
+    }
+
+    /* ----------- Officers Section ----------- */
+    #officers {
+        flex-direction: column; // Changes the layout to column on small screens
+        padding: 0 20px; // Adds padding for spacing
+        margin: 30px 10px; // Adds margin for spacing
+        gap: 1rem;
+
+        .bank-officers {
+            margin: 10px 5px; // Adds margin between officers
+
+            img {
+                width: 175px; // Smaller image for officers
+            }
+
+            p {
+                padding: 0px 30px; // Adds padding around the quote text
+            }
+
+            div>p {
+                &::before {
+                    left: 3px; // Adjusts position of the quote mark
+                    bottom: -61px; // Fine-tunes the position of the quote mark
+                }
+            }
+
+            div>.adjustqoutes::before {
+                left: 0px; // Fine-tunes position of adjusted quote marks
+                bottom: -128px; // Fine-tunes bottom position of quote mark
+            }
+        }
+    }
+
+    /* ----------- footer Section ----------- */
+    footer {
+        padding: 30px 20px; // Padding for spacing in the footer
+
+        p {
+            font-size: 0.65rem; // Smaller font size for footer text
+        }
+
+        div>img {
+            width: 25px; // Smaller size for social media logos
+            height: 25px; // Equal height to maintain aspect ratio
+            margin-left: 5px;
+        }
+    }
+}

@@ -1,0 +1,441 @@
+@charset "UTF-8";
+/* Global Styles */
+/* Breakpoints */
+/* Media Query Mixins */
+/* Universal Box-Sizing and Font Settings */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* -------------- Body ---------------- */
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555555;
+}
+
+/* -------------- h3 and hr common styles for hero section and Get the Citizens Advantage Section ---------------- */
+h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #00945f;
+  font-weight: 400;
+  margin: 20px 0;
+}
+
+hr {
+  width: 5%;
+  margin: auto;
+  border: 1px solid #00945f;
+}
+
+/* ----------- Hero Section ----------- */
+#herosection {
+  text-align: left;
+  padding: 0px 0px 40px 0px;
+  background-color: #fff;
+}
+#herosection #logo {
+  width: 325px;
+  height: auto;
+  margin: 15px 30px;
+}
+#herosection #main-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  object-fit: cover;
+  object-position: left;
+}
+#herosection p {
+  font-size: 1rem;
+  color: #7b7b7b;
+  line-height: 1.5;
+  word-spacing: 0.2rem;
+  margin: 30px;
+  padding: 0px 20px;
+}
+#herosection .carrersbutton {
+  text-align: center;
+}
+#herosection .carrersbutton button {
+  background-color: #e97300;
+  padding: 10px 20px;
+  font-size: 1.6rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#herosection .carrersbutton button:hover {
+  background-color: darkorange;
+}
+
+/* ----------- Get the Citizens Advantage Section ----------- */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px;
+  justify-content: center;
+  margin: 80px 40px;
+  position: relative;
+}
+.card-container svg {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+}
+.card-container .bottom-svg {
+  top: 65%;
+}
+
+.cards {
+  background: #fff;
+  padding: 0px 30px;
+  width: 47%;
+  text-align: left;
+}
+.cards h4 {
+  font-size: 1.35rem;
+  color: #00945f;
+  font-weight: 400;
+  padding-bottom: 15px;
+}
+.cards p {
+  color: #7b7b7b;
+  line-height: 1.5;
+  word-spacing: 0.2rem;
+  text-align: justify;
+}
+.cards p a {
+  color: #91c12c;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card-space {
+  margin-bottom: 50px;
+}
+
+/* ----------- Loans Section ----------- */
+#loans-section {
+  margin: 100px 40px;
+}
+#loans-section h4 {
+  font-size: 1.75rem;
+  font-weight: 300;
+  background-color: #00945f;
+  color: white;
+  text-align: center;
+  padding-block: 10px;
+}
+#loans-section p {
+  background-color: #ebf7f5;
+  color: #8f8f8f;
+  line-height: 1.5;
+  word-spacing: 0.5rem;
+  padding: 20px 100px;
+  text-align: justify;
+}
+
+/* ----------- Officers Section ----------- */
+#officers {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6rem;
+  padding: 0rem 6rem;
+  gap: 6rem;
+}
+
+.bank-officers {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+}
+.bank-officers > div > img {
+  width: 12rem;
+  height: auto;
+  align-self: center;
+}
+.bank-officers > div > p {
+  position: relative;
+  z-index: 2;
+  margin-top: 1.125rem;
+  color: #8f8f8f;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  word-spacing: 0.11rem;
+  font-weight: 400;
+  font-style: italic;
+}
+.bank-officers > div > p::before {
+  font-family: "Lora", serif;
+  position: absolute;
+  font-size: 11rem;
+  z-index: 1;
+  opacity: 0.2;
+  content: "‘‘";
+  left: -32px;
+  bottom: -125px;
+}
+.bank-officers .officer-name {
+  margin-top: 20px;
+  font-style: normal;
+  color: #00945f;
+}
+
+/* ----------- Footer Section ----------- */
+footer {
+  border-top: 1px solid #00945f;
+  padding: 50px 20px;
+}
+footer p {
+  color: #8f8f8f;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+footer p a {
+  text-decoration: underline;
+  color: #8f8f8f;
+}
+footer .Statements {
+  margin-top: 30px;
+  color: #5a5a5a;
+}
+footer div img {
+  width: 30px;
+  height: 30px;
+}
+footer .social-media-logos {
+  margin-bottom: 25px;
+}
+
+/*for desktops*/
+@media (max-width: 1250px) {
+  /* -------------- h3 and hr common styles for hero section and Get the Citizens Advantage Section ---------------- */
+  h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #00945f;
+    font-weight: 400;
+    margin: 20px 0;
+  }
+  hr {
+    width: 15%;
+  }
+  /* ----------- Hero Section ----------- */
+  #herosection #logo {
+    width: 300px;
+    height: auto;
+    margin: 10px;
+  }
+  #herosection p {
+    margin: 20px 30px 50px;
+  }
+  /* ----------- Get the Citizens Advantage Section ----------- */
+  .card-container {
+    gap: 0px;
+    margin: 10px 0px 20px;
+  }
+  .cards {
+    padding: 0px 30px;
+    width: 50%;
+    margin-block: 50px;
+  }
+  /* ----------- Loans Section ----------- */
+  #loans-section {
+    margin-bottom: 50px;
+  }
+  #loans-section p {
+    word-spacing: 0.2rem;
+    padding: 20px;
+  }
+}
+/*for tables and ipads*/
+@media (max-width: 900px) {
+  hr {
+    width: 15%;
+  }
+  /* ----------- Hero Section ----------- */
+  #herosection #logo {
+    width: 220px;
+    height: auto;
+    margin: 10px;
+  }
+  #herosection #main-img {
+    object-position: top-left;
+    object-position: -2%;
+    height: 35vh;
+    width: 100%;
+  }
+  #herosection p {
+    margin: 20px 50px 50px;
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: justify;
+    word-spacing: 0;
+  }
+  /* ----------- Get the Citizens Advantage Section ----------- */
+  .card-container {
+    gap: 0px;
+    margin: 10px 0px 20px;
+  }
+  .card-container svg {
+    display: none;
+  }
+  .card-container .cards {
+    padding: 0px 50px;
+    width: 100%;
+    margin-block: 20px;
+  }
+  .card-container .cards p {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #7b7b7b;
+  }
+  .card-container :last-child p {
+    border-bottom: none;
+  }
+  /* ----------- Loans Section ----------- */
+  #loans-section p {
+    word-spacing: 0.2rem;
+    padding: 20px;
+  }
+  /* ----------- Officers Section ----------- */
+  #officers {
+    flex-wrap: wrap;
+  }
+  #officers .bank-officers div > p::before {
+    left: -15px;
+    bottom: -107px;
+  }
+  #officers .bank-officers div > .adjustqoutes::before {
+    left: -6px;
+    bottom: -152px;
+  }
+}
+/* ----------- Media Queries for Responsiveness ----------- */
+/* Small devices (mobile phones) */
+@media (max-width: 600px) {
+  /* -------------- h3 and hr common styles for hero section and Get the Citizens Advantage Section ---------------- */
+  h3 {
+    font-size: 1.6rem;
+    font-weight: 200;
+    margin-block: 15px;
+    line-height: 1;
+  }
+  hr {
+    width: 25%;
+  }
+  /* ----------- Hero Section ----------- */
+  header {
+    text-align: center;
+  }
+  #herosection #logo {
+    width: 180px;
+    height: auto;
+    margin: 10px;
+  }
+  #herosection #main-img {
+    object-position: top-left;
+    object-position: -2%;
+    height: 35vh;
+    width: 100%;
+  }
+  #herosection p {
+    margin: 20px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    text-align: left;
+    word-spacing: 2px;
+  }
+  #herosection .carrersbutton button {
+    font-size: 1.25rem;
+    margin-top: 2rem;
+  }
+  /* ----------- Get the Citizens Advantage Section ----------- */
+  #articles h3 {
+    padding: 0px 50px;
+  }
+  .card-container {
+    gap: 0rem;
+    margin-block: 30px;
+    justify-content: space-evenly;
+  }
+  .card-container svg {
+    display: none;
+  }
+  .card-container .cards {
+    padding: 0px 20px;
+    width: 100%;
+    margin-top: -11px;
+  }
+  .card-container .cards h4 {
+    font-size: 1.25rem;
+    padding-bottom: 8px;
+  }
+  .card-container .cards p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: left;
+    border-bottom: 1px solid #7b7b7b;
+  }
+  .card-container :last-child p {
+    border-bottom: none;
+  }
+  /* ----------- Loans Section ----------- */
+  #loans-section {
+    margin: 20px;
+  }
+  #loans-section h4 {
+    font-size: 1.25rem;
+    padding: 10px 20px;
+  }
+  #loans-section p {
+    padding: 20px 10px;
+    font-size: 0.95rem;
+    word-spacing: 0;
+    text-align: left;
+  }
+  /* ----------- Officers Section ----------- */
+  #officers {
+    flex-direction: column;
+    padding: 0 20px;
+    margin: 30px 10px;
+    gap: 1rem;
+  }
+  #officers .bank-officers {
+    margin: 10px 5px;
+  }
+  #officers .bank-officers img {
+    width: 175px;
+  }
+  #officers .bank-officers p {
+    padding: 0px 30px;
+  }
+  #officers .bank-officers div > p::before {
+    left: 3px;
+    bottom: -61px;
+  }
+  #officers .bank-officers div > .adjustqoutes::before {
+    left: 0px;
+    bottom: -128px;
+  }
+  /* ----------- footer Section ----------- */
+  footer {
+    padding: 30px 20px;
+  }
+  footer p {
+    font-size: 0.65rem;
+  }
+  footer div > img {
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+  }
+}
+
+/*# sourceMappingURL=styless.css.map */
